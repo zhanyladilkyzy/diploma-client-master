@@ -1,0 +1,10 @@
+@import '../../../../../node_modules/angular-calendar/css/angular-calendar.css';
+@import "../../../../@vex/styles/partials/plugins/_angular-calendar.scss";
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-image: url("../../../../assets/img/illustrations/leaves.jpg");
+  background-size: cover;
+}

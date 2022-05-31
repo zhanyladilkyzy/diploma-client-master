@@ -1,0 +1,42 @@
+<div class="container registration" style="width: 400px">
+  <!-- Default form register -->
+  <form [formGroup]="form"  class="border border-light p-5">
+    <p class="heading" style="margin-top: 50px">Register</p>
+    <div fxLayout="column" fxLayoutAlign="space-around center" >
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput type="text" id="username" formControlName="username">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" id="name" formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput type="text" id="surname" formControlName="lastName">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Phone Number</mat-label>
+        <input matInput type="text" id="phoneNumber" formControlName="phone">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="text" name="email" id="email" formControlName="email">
+        <mat-error *ngIf="form.get('email').hasError('email')">Please enter valid email</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" name="password" id="password" formControlName="password">
+        <mat-error *ngIf="form.get('password').hasError('minlength')">Password must have at least 8 characters</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="d-flex justify-content-center" fxLayoutAlign="center center" >
+      <button [disabled]="!form.valid" (click)="send()" type="submit">
+        Sign Up
+      </button>
+    </div>
+
+
+  </form>
+</div>

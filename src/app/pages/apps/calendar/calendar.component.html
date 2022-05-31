@@ -1,0 +1,15 @@
+<div class="h-full flex flex-col">
+  <br>
+  <vex-scrollbar [ngSwitch]="view" class="px-0 shadow flex-auto relative" vexContainer>
+    <mwl-calendar-month-view
+      (dayClicked)="dayClicked($event.day)"
+      (eventClicked)="handleEvent('Clicked', $event.event)"
+      (eventTimesChanged)="eventTimesChanged($event)"
+      *ngSwitchCase="'month'"
+      [activeDayIsOpen]="activeDayIsOpen"
+      [events]="events"
+      [refresh]="refresh"
+      [viewDate]="viewDate">
+    </mwl-calendar-month-view>
+  </vex-scrollbar>
+</div>

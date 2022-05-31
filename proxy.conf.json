@@ -1,0 +1,11 @@
+[
+  {
+    "context": [
+      "/auth"
+    ],
+    "target": "http://195.49.215.84:9004",
+    "secure": true,
+    "changeOrigin": true
+  }
+]
+
